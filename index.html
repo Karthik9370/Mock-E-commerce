@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bee's Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+  <header id="siteHeader">
+    <h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Bee" class="logo-emoji" />
+      Bee's Hub <span class="cart-badge" id="cartCount">0</span>
+    </h1>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()" />
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="">All Categories</option>
+        <option value="chair">🪑 Chairs</option>
+        <option value="earbuds">🎧 Earbuds</option>
+        <option value="speaker">🔊 Speakers</option>
+        <option value="tracker">⌚ Fitness & Smartwatches</option>
+        <option value="accessories">🧩 Accessories</option>
+        <option value="lighting">💡 Lighting</option>
+        <option value="apparel">👕 Apparel</option>
+        <option value="mobiles">📱 Mobiles</option>
+        <option value="laptops">💻 Laptops</option>
+        <option value="kitchen">🍳 Kitchen Appliances</option>
+        <option value="home">🏠 Home Essentials</option>
+      </select>
+      
+      <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+      <button id="viewCart" onclick="window.location.href='checkout.html'">🛒 View Cart</button>
+    </div>
+  </header>
+
+  <div class="product-grid" id="productGrid"></div>
+  <div class="message" id="cart-message"></div>
+  <div id="toast" class="toast"></div>
+
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
